@@ -4,8 +4,8 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jdk
-WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+WORKDIR /app 
+COPY --from=build /app/target/employee-manager-app.0.0.1-SNAPSHOT.jar employee-manager-app.jar
 
 EXPOSE 8080
 
