@@ -9,4 +9,5 @@ COPY --from=build /app/target/employee-manager-app.0.0.1-SNAPSHOT.jar employee-m
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","employee-manager-app.jar"]
+
